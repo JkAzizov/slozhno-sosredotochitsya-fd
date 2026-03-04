@@ -12,7 +12,7 @@
   --text-color: #353430;
 }
 
-.rec {
+:root.theme-light .rec {
   display: none;
 }
 
