@@ -2,4 +2,222 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-image);
+  background-color: var(--bg-color);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'IBM Plex Mono', sans-serif;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-block-size: 100vh;
+  padding: var(--section-padding);
+}
+
+.header__title {
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-self: center;
+  line-height: 0.83;
+  padding-bottom: 55px;
+}
+
+.header__description {
+  justify-self: center;
+  align-self: start;
+  max-inline-size: 355px;
+  padding: var(--section-padding);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.header__theme-menu {
+  grid-row: 1;
+  margin-right: 26px;
+  justify-self: end;
+  align-self: start;
+  padding-top: 50px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background: transparent;
+  color: var(--title-color);
+  border: none;
+  cursor: pointer;
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgb(255 0 112 / 0.4);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid currentColor;
+  outline: none;
+}
+
+.title-decor {
+  background-color: var(--title-color);
+  color: var(--bg-color);
+}
+
+.section__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.section {
+  display: grid;
+  font-size: 18px;
+  gap: 20px;
+  padding: var(--section-padding);
+  line-height: 23.4px;
+}
+
+.rec {
+  inset-inline-end: 20px;
+  inset-block-start: 20px;
+  color: var(--accent-color);
+  position: absolute;
+}
+
+.rec::after {
+  display: inline-block;
+  content: '';
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px var(--accent-color);
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  margin-inline-start: 5px;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.card {
+  display: grid;
+  gap: 10px;
+}
+
+.card__title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  padding: var(--section-padding);
+  min-block-size: 100vh;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px 40px;
+  }
+  
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .section {
+    padding: 60px 40px;
+  }
+
+  .gallery {
+    display: grid;
+    gap: 10px;
+  }
+}
+
+@media (width >=1024px) {
+  .header{
+    padding: 20px 60px;
+  }
+
+  .section {
+    padding: 60px;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+  }
 }

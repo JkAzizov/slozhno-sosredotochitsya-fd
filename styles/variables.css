@@ -2,3 +2,39 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --bg-image: url('../images/cover-image-dark.png');
+  --bg-color: #000028;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --text-color: #f1b2ce;
+}
+body {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.section {
+  --section-padding: 20px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --section-padding: 40px;
+  }
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/IBMPlexMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
