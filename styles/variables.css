@@ -14,7 +14,7 @@ body {
 }
 
 .section {
-  --section-padding: 40px 10px;
+  --section-padding: 25px 10px;
 }
 
 @media (width >= 768px) {
