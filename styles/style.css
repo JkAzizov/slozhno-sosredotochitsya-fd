@@ -347,7 +347,9 @@
     padding: 20px 60px;
   }
 
-  .header__description {max-inline-size: 55%;}
+  .header__description {
+    max-inline-size: 55%;
+  }
 
   .header__theme-menu {
     justify-self: center;
