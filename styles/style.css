@@ -15,7 +15,7 @@
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  min-block-size: 100vh;
+  min-block-size: 668px;
   padding: var(--section-padding);
 }
 
@@ -108,7 +108,7 @@
   display: inline-block;
   content: '';
   background-color: var(--accent-color);
-  box-shadow: 0 0 4px var(--accent-color);
+  box-shadow: 0 0 4px 2 px var(--accent-color);
   block-size: 9px;
   inline-size: 9px;
   border-radius: 50%;
@@ -186,7 +186,7 @@
   display: grid;
   place-items: center;
   padding: var(--section-padding);
-  min-block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .footer__title {
