@@ -370,26 +370,6 @@
     grid-column: span 2;
   }
 
-  .gallery img {
-    height: 100%;
-  }
-
-  .gallery img:nth-child(1) {
-    grid-column: span 2;
-  }
-
-  .gallery img:nth-child(2) {
-    grid-row: span 2;
-  }
-
-  .gallery img:nth-child(3) {
-    grid-row: span 2;
-  }
-
-  .gallery img:nth-child(5) {
-    grid-column: span 2;
-  }
-
   .footer {
     min-block-size: 1024px;
     padding-top: 25px;
@@ -474,5 +454,7 @@
     min-block-size: 768px;
   }
 
-  .footer__title {font-size: 9.9rem;}
+  .footer__title {
+    font-size: 9.9rem;
+  }
 }
