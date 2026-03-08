@@ -298,15 +298,10 @@
   }
 
   .rec::after {
-    display: inline-block;
-    content: '';
-    background-color: var(--accent-color);
     box-shadow: 0 0 4px var(--accent-color);
-    block-size: 9px;
-    inline-size: 9px;
-    border-radius: 50%;
     margin-inline-start: 5px;
   }
+
 
   .decorated-zone {
     position: relative;
